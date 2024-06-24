@@ -1,12 +1,29 @@
-# FuLL-Stack Project:A Real Time Chat App | Postgres, TypeScript, Prisma
+# Full-Stack Project:A Real Time Chat App 
 
+This is a real-time chat application built with the PERN stack (PostgreSQL, Express, React, Node.js) alongside TypeScript, Socket.io, Prisma, and TailwindCSS. The app features user authentication and authorization using JWT, real-time messaging, and online user status tracking.
 
 Some Features:
 
--    Tech stack: PERN + TypeScript + Socket.io + Prisma + TailwindCSS
 -    Authentication && Authorization with JWT
 -    Real-time messaging with Socket.io
 -    Online user status (Socket.io and React Context)
+-    Modern UI
+-    PostgresDB to Store UserData
+-    FireBase Storage to store Media like pictures and video
+
+TechStack:
+
+-  ReactJs
+-  TailwindCSS
+-  TypeScript
+-  Prisma
+-  Postgres
+-  Socket.io
+-  ExpressJs
+-  FireBase
+
+
+
 
 # Run Locally
 
