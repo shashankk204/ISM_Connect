@@ -39,7 +39,8 @@ export const signup =async(req:Request,res:Response)=>
         );
         if(newuser)
         {
-            const token=generatoken(newuser.username,res);
+            const token=generatoken(newuser.id,res);
+
             res.status(201).json({
                 id:newuser.id,
                 fullName:newuser.fullName,
@@ -79,7 +80,7 @@ export const login =async(req:Request,res:Response)=>
             return res.status(400).json({error:"Invalid Credentials"});
         }
 
-        generatoken(user.username,res);
+        generatoken(user.id,res);
         res.status(200).json(
             {
                 id:user.id,
@@ -113,6 +114,25 @@ export const logout =async(req:Request,res:Response)=>
 
 
 
-export const GetMe= async()=>{
+export const GetMe= async(req:Request,res:Response)=>{
+    try {
+        const user=await prisma.user.findUnique({where:{id:req.user.id}});
+        if(!user)
+        {
+            return res.status(400).json({error:"user not found"});
+
+        }
+        res.status(200).json({
+            id:user.id,
+            username:user.username,
+            fullname:user.fullName,
+            ProfilePic:user.profilePic
+        })
+
+    } catch (error:any) {
+        console.log("error at GetMe",error.message);
+        res.status(500).json({error:"internal server error"});
+        
+    }
     
 }
