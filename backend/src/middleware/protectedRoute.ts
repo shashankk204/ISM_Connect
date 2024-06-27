@@ -44,7 +44,6 @@ export default async function ProtectedRoute(req:Request,res:Response,next:NextF
             next();
             
         } catch (error:any) {
-            console.log("error at protectRoute",error.message);
             return res.status(400).json({error:"invalid token"})
             
         }
