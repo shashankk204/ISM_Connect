@@ -44,6 +44,8 @@ export const SendMessage= async(req:Request,res:Response)=>
                 }
             })
         }
+
+        
         const receiverSocketId = getReceiverSocketId(recieverId);
 
 		if (receiverSocketId) {
@@ -78,7 +80,7 @@ export const GetMessages=async (req:Request,res:Response)=>
     });
         if(!conversation)
         {
-            res.status(200).json({});
+            return res.status(200).json([]);
         }
         res.status(200).json(conversation?.messages);
         

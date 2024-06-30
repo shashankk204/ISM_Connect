@@ -122,11 +122,12 @@ export const GetMe= async(req:Request,res:Response)=>{
             return res.status(400).json({error:"user not found"});
 
         }
+        
         res.status(200).json({
             id:user.id,
             username:user.username,
             fullname:user.fullName,
-            ProfilePic:user.profilePic
+            profilePic:user.profilePic
         })
 
     } catch (error:any) {
