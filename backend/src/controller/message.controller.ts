@@ -106,6 +106,7 @@ export const GetUsersForSideBar=async (req:Request,res:Response)=>
             select: {
 				id: true,
 				fullName: true,
+                username:true,
 				profilePic: true,
 			},
         })
