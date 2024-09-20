@@ -53,7 +53,8 @@ npm run build
 ```shell
 npm start
 ```
+<hr>
 
-Name:-Shashank Kumar
-University: IIT Dhanbad
-Depratment: Electronics and Communication Engineering
+- Name:-Shashank Kumar
+- University: IIT Dhanbad
+- Depratment: Electronics and Communication Engineering
