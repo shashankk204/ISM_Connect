@@ -9,7 +9,6 @@ Some Features:
 -    Online user status (Socket.io and React Context)
 -    Modern UI
 -    PostgresDB to Store UserData
--    FireBase Storage to store Media like pictures and video
 
 TechStack:
 
@@ -20,7 +19,7 @@ TechStack:
 -  Postgres
 -  Socket.io
 -  ExpressJs
--  FireBase
+
 
 
 
